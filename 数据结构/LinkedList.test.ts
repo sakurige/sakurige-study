@@ -1,0 +1,35 @@
+import LinkedList from "./LinkedList/LinkedList"
+import { Node } from "./LinkedList/LinkedList"
+describe("LinkedList", () => {
+  const linkList = new LinkedList<string>()
+  linkList.add("000")
+  linkList.add("111")
+  linkList.add("222")
+  linkList.add("333")
+  linkList.add("444")
+  linkList.add("555")
+  it("for add method", () => {
+    linkList.add("shou", 0)
+    linkList.add("zhong", 3)
+    linkList.add("wei", 8)
+    expect(linkList.head.value).toBe("shou")
+    expect(linkList.tail.value).toBe("wei")
+    expect(linkList.get(3)).toBe("zhong")
+  })
+  it("for remove method", () => {
+    expect(linkList.remove(3)).toBe("zhong")
+    expect(linkList.remove(0)).toBe("shou")
+    expect(linkList.remove(linkList.size - 1)).toBe("wei")
+  })
+  it("for indexOf method", () => {
+    expect(linkList.indexOf("111")).toBe(1)
+    expect(linkList.indexOf("000")).toBe(0)
+    expect(linkList.indexOf("555")).toBe(linkList.size - 1)
+  })
+  it("for contains method", () => {
+    expect(linkList.contains("111")).toBe(true)
+    expect(linkList.contains("000")).toBe(true)
+    expect(linkList.contains("555")).toBe(true)
+    expect(linkList.contains("55222225")).toBe(false)
+  })
+})
