@@ -12,8 +12,7 @@ describe("LinkedList", () => {
     linkList.add("shou", 0)
     linkList.add("zhong", 3)
     linkList.add("wei", 8)
-    expect(linkList.head.value).toBe("shou")
-    expect(linkList.tail.value).toBe("wei")
+    expect((linkList.head as Node<string>).value).toBe("shou")
     expect(linkList.get(3)).toBe("zhong")
   })
   it("for remove method", () => {

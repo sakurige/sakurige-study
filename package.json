@@ -5,7 +5,7 @@
 	"tpye": "module",
 	"scripts": {
 		"test": "jest",
-		"dev": "ts-node ./数据结构/test.ts"
+		"dev": "ts-node ./数据结构/LinkedList.test.ts"
 	},
 	"repository": {
 		"type": "git",
