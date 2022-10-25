@@ -1,7 +1,7 @@
-import LinkedList from "./LinkedList/LinkedList"
-import { Node } from "./LinkedList/LinkedList"
-describe("LinkedList", () => {
-  const linkList = new LinkedList<string>()
+import SingleLinkList from "./LinkedList/SingleLinkedList"
+import { Node } from "./LinkedList/list"
+describe("SingleLinkList", () => {
+  const linkList = new SingleLinkList<string>()
   linkList.add("000")
   linkList.add("111")
   linkList.add("222")

@@ -1,12 +1,7 @@
-import List from "./list"
+import { List, Node } from "./list"
+
 /**
- * 节点类
- */
-class Node<E> {
-  constructor(public value: E, public next: Node<E> | null) {}
-}
-/**
- * 链表
+ * 单向链表
  */
 class SingleLinkList<E> implements List<E> {
   #size: number = 0
@@ -105,6 +100,8 @@ class SingleLinkList<E> implements List<E> {
     return node
   }
 }
+
+
 const linkList = new SingleLinkList<number>()
 linkList.add(0)
 linkList.add(1)
@@ -126,4 +123,4 @@ console.log("index   ", linkList.indexOf(5), linkList.size)
 // console.log(linkList.head, linkList.size)
 
 export default SingleLinkList
-export { Node }
+// export { Node }
